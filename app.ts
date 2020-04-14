@@ -21,6 +21,10 @@ app.use('/api', (req, res, next) => {
     res.json({ "result": "success" });
 });
 
+app.use('/api/runner', (req, res, next) => {
+    res.json({ "result runner": "success runner 101" });
+});
+
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
     const err = new Error('Not Found');

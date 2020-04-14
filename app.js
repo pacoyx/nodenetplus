@@ -1,7 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
+Object.defineProperty(exports, "__esModule", { value: true });
 const debug = require("debug");
 const express = require("express");
 const path = require("path");
@@ -15,19 +13,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index_1.default);
 app.use('/users', user_1.default);
 app.use('/api', (req, res, next) => {
-    res.json({
-        "result": "success",
-        "estado": "00"
-    });
+    res.json({ "result": "success" });
 });
-
-app.use('/test', (req, res, next) => {
-    res.json({
-        "result": "test success",
-        "estado test": "00"
-    });
+app.use('/api/runner', (req, res, next) => {
+    res.json({ "result runner": "success runner 101" });
 });
-
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
     const err = new Error('Not Found');
