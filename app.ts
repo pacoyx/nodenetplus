@@ -21,7 +21,7 @@ app.use('/api', (req, res, next) => {
     res.json({ "result": "success" });
 });
 
-app.use('/api/runner', (req, res, next) => {
+app.use('/runner', (req, res, next) => {
     res.json({ "result runner": "success runner 101" });
 });
 
