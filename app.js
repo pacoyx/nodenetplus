@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index_1.default);
 app.use('/users', user_1.default);
 app.use('/api', (req, res, next) => {
-    res.json({ "result": "success" });
+    res.json({ "result": "success","estado":"00"});
 });
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
