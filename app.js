@@ -15,6 +15,11 @@ app.use('/users', user_1.default);
 app.use('/api', (req, res, next) => {
     res.json({ "result": "success","estado":"00"});
 });
+
+app.use('/api/test', (req, res, next) => {
+    res.json({ "result": "test success","estado test":"00"});
+});
+
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
     const err = new Error('Not Found');
